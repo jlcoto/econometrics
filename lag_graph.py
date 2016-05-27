@@ -1,5 +1,6 @@
 def lag_graph(lag_array):
-    """"Given an array of lags, creates a lag graph."""
+    """"Given an array of lags, creates a lag graph.
+    takes as input a numpy array"""
     x = np.arange(1, len(lag_array)+1)
     plt.plot(np.linspace(1,len(lag_array)), np.repeat(0, len(np.linspace(1,len(lag_array)))), 
              "-", color="#526774")
