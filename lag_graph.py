@@ -36,8 +36,8 @@ def lag_graph_ci(lag_array, num_periods, conf_inter=False):
     
     #Plotting confidence intervals, if selected
     if conf_inter:
-        low_ci = norm.ppf(0.05, loc=0, scale=1/np.sqrt(200))
-        up_ci = norm.ppf(0.95, loc=0, scale=1/np.sqrt(200))
+        low_ci = norm.ppf(0.05, loc=0, scale=1/np.sqrt(num_periods))
+        up_ci = norm.ppf(0.95, loc=0, scale=1/np.sqrt(num_periods))
         plt.plot(np.linspace(1, len(lag_array)), 
                  np.repeat(low_ci, len(np.linspace(1, len(lags_obs_ma_1)))),'--', color="#3B3C3F")
         plt.plot(np.linspace(1, len(lag_array)), 
